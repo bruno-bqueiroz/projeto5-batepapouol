@@ -1,0 +1,16 @@
+body {
+    width: auto;
+    height: auto;
+    background-color: #E5E5E5;
+    font-family: sans-serif;
+}
+
+h1 {
+    width: \uto;
+    height: auto;
+    color: #75B79E;
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: 700;
+}
