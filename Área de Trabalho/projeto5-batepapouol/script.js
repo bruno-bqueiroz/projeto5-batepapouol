@@ -13,7 +13,9 @@ function buscarDados(){
  }
 
  function renderizarReceitas(){
-     const ulMensagens1 = document.querySelector('.mensagens1');
+      const ulMensagens2 = document.querySelector('.mensagens1');
+      ulMensagens2.innerHTML = "";  
+      const ulMensagens1 = document.querySelector('.mensagens1');
      ulMensagens1.innerHTML = "";
      const ulMensagens = document.querySelector('.mensagens1');
      ulMensagens.innerHTML = "";
@@ -32,8 +34,18 @@ function buscarDados(){
       <a>(${mensagens[i].time})</a><b>${mensagens[i].from }</b>  para <b>${mensagens[i].to}</b> <p>${ mensagens[i].text}</p>
       </div>
       `;
-   }
+      }
+      else if(mensagens[i].type === "private_message"){
+         ulMensagens2.innerHTML += `
+         <div class="caixa-2">
+         <a>(${mensagens[i].time})</a><b>${mensagens[i].from }</b>  Reservadamente para <b>${mensagens[i].to}</b> <p>${ mensagens[i].text}</p>
+         </div>
+         `;
+         }
     }
    
     
  }
+
+
+ 
