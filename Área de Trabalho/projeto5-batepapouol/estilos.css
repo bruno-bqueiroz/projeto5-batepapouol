@@ -4,22 +4,65 @@
 
 
 body {
-    max-width: 400px;
+    width: 400px;
     height: 1000px;
-    background-color: #f3f2f2;
+    background-color: #dbd9d9;
 }
-.mensagens{
+
+.topo {
+    width: 400px;
+    height: 80px;
+    padding: 5px 15px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;  
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px rgb(173, 173, 173);
+    z-index: 1;
+    
+}
+.topo ion-icon{
+    margin-left: 220px;
+    font-size: 50px;
+}
+.topo img{
+    height: 70%;
+}
+
+
+.mensagens1{
     font-size: 15px;
 }
 
-.caixa-1{
-    margin: 2px;
+.caixa{
+    margin-bottom: 2px;
     width: 400px;
     height: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #DCDCDC;
+    background-color: white;
+
+}
+
+
+.mensagens{
+    font-size: 15px;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+.caixa-1{
+    margin-bottom: 2px;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(211, 208, 208);
 }
 
 a{
@@ -38,7 +81,7 @@ p{
 
 
 .rodape {
-    width: 100%;
+    width: 400px;
     height: 80px;
     padding: 5px 5px;
     position: fixed;
@@ -57,6 +100,7 @@ p{
     background-color: #FFFFFF;
 }
 button{
+    font-size: 25px;
     margin: 0 20px;
     border: none;
 }
