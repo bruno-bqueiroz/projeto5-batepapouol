@@ -7,9 +7,15 @@ body {
     width: 400px;
     height: 1000px;
     background-color: #dbd9d9;
+    
+    
+    
+
+
 }
 
 .topo {
+  
     width: 400px;
     height: 80px;
     padding: 5px 15px;
@@ -33,12 +39,14 @@ body {
 
 .mensagens1{
     font-size: 15px;
+    padding-top: 100px;
+   
 }
 
 .caixa{
     margin-bottom: 2px;
     width: 400px;
-    height: 40px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -51,14 +59,11 @@ body {
     font-size: 15px;
 }
 
-.container{
-    margin-top: 100px;
-}
 
 .caixa-1{
     margin-bottom: 2px;
     width: 400px;
-    height: 40px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -67,11 +72,16 @@ body {
 .caixa-2 {
     margin-bottom: 2px;
     width: 400px;
-    height: 40px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(252, 152, 152);
+}
+.vazia{
+    width: 400px;
+    height: 100px;
+    background-color: aqua;
 }
 
 

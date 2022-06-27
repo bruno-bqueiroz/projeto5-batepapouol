@@ -1,3 +1,29 @@
+// ENTRAR NA SALA
+/*function participantes(){
+   const participante = {
+      name: prompt ("Qual seu lindo Nome?")
+   }
+
+  const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", participante);
+   promise.then(alertarSucesso);
+   promise.catch(alertarErro);
+
+participantes();
+// VERIFICA SE HOUVE SUCESSO NO CADASTRO
+function alertarSucesso(resposta){
+   console.log(resposta);
+
+}
+// VERIFICA SE  HOUVE FALHA NO CADASTRO
+function alertarErro(error){
+   console.log(error);
+
+}
+}*/
+
+
+// BUSCAR MENSAGENS DA SALA   
+
 let mensagens=[];
 
 buscarDados(); 
@@ -6,11 +32,19 @@ function buscarDados(){
     promessa.then(popularDados);
 }
 
- function popularDados(resposta){
-    console.log(resposta);
+
+
+
+
+
+
+
+function popularDados(resposta){
     mensagens = resposta.data;  
     renderizarReceitas();
- }
+}
+
+
 
  function renderizarReceitas(){
       const ulMensagens2 = document.querySelector('.mensagens1');
@@ -42,10 +76,20 @@ function buscarDados(){
          </div>
          `;
          }
-    }
-   
-    
- }
+      }   
+      
+   }
 
+    
+      var scroll = document.querySelector(".vazia");
+      scroll.scrollTop = rolado.scrollHeight;
+  
+
+   setTimeout(function(){
+      window.scrollTo(0, scroll)
+  }, 1);
+   
+
+  
 
  
