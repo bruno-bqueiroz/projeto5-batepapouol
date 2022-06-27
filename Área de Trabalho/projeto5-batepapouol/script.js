@@ -1,8 +1,9 @@
 // ENTRAR NA SALA
-
+let nome = "";
+ nome = prompt ("qual seu lindo nome?")
 function participantes(participante){
    participante = {
-      name: prompt ("Qual seu lindo Nome?")
+      name: nome,
    }
    if(participante.name === ""){
       participante = {
@@ -19,8 +20,8 @@ function participantes(participante){
 }
 }
 
-
 participantes();
+
 
 
 // VERIFICA SE HOUVE SUCESSO NO CADASTRO
@@ -34,7 +35,7 @@ function alertarErro(error){
 }
 
 
-
+setInterval (participantes, 3000);
 
 // BUSCAR MENSAGENS DA SALA   
 
@@ -94,6 +95,35 @@ function popularDados(resposta){
      
    
 }
+
+let enviar = undefined;
+
+function perguntar(pergunta) {
+pergunta = document.querySelector(".caixa-texto").value;
+enviar =
+   {
+      from: nome,
+      to: "Todos",
+      text: pergunta,
+      type: "message"
+   }
+   const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages",
+   enviar);
+   promise.then(alertarSucesso);
+   promise.catch(alertarErro);
+
+
+   console.log(enviar)
+}
+
+
+
+perguntar();
+
+
+
+
+
 
    // ATUALIZAR MENSAGENS DA SALA
    setInterval(buscarDados, 3000);
