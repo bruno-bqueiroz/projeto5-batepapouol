@@ -1,20 +1,27 @@
 // ENTRAR NA SALA
+
 function participantes(participante){
-    participante = {
+   participante = {
       name: prompt ("Qual seu lindo Nome?")
    }
-
-  const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", participante);
+   if(participante.name === ""){
+      participante = {
+         name: prompt ("Qual seu lindo Nome?")
+      }
+      
+   } else{
+   
+    
+  const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants",
+  participante);
    promise.then(alertarSucesso);
    promise.catch(alertarErro);
 }
-
+}
 
 
 participantes();
 
-const element = document.getElementById("demo");
-setInterval(function() {element.innerHTML += "Hello"}, 1000);
 
 // VERIFICA SE HOUVE SUCESSO NO CADASTRO
 function alertarSucesso(resposta){
@@ -33,27 +40,26 @@ function alertarErro(error){
 
 let mensagens=[];
 
-buscarDados(); 
+
 function buscarDados(){
-    let promessa = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
-    promessa.then(popularDados);
+    let promessa = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages")
+         promessa.then(popularDados);
+ 
 }
-
-
-
-
-
-
-
+buscarDados();
 
 function popularDados(resposta){
-    mensagens = resposta.data;  
-    renderizarMensagens();
+   mensagens = resposta.data || [];  
+   renderizarMensagens();
 }
+
+
+
 
 
 
  function renderizarMensagens(){
+   console.log(mensagens)
       const ulMensagens2 = document.querySelector('.mensagens1');
       ulMensagens2.innerHTML = "";  
       const ulMensagens1 = document.querySelector('.mensagens1');
@@ -84,16 +90,18 @@ function popularDados(resposta){
          `;
          }
       }   
-  window.scrollTo(0, 5000);
-      
+   window.scrollTo(0, 6000);
+     
+   
+}
+
+   // ATUALIZAR MENSAGENS DA SALA
+   setInterval(buscarDados, 3000);
+  
+ 
     
-      function autoRefresh() {
-         window.location = window.location.mensagens;
-      }
-      setInterval(autoRefresh(), 5000);
+ 
       
-      
-   }
 
     
 
