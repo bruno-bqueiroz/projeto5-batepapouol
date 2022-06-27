@@ -50,6 +50,8 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
     background-color: white;
 
 }
@@ -67,6 +69,8 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
     background-color: rgb(211, 208, 208);
 }
 .caixa-2 {
@@ -76,12 +80,9 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
     background-color: rgb(252, 152, 152);
-}
-.vazia{
-    width: 400px;
-    height: 100px;
-    background-color: aqua;
 }
 
 

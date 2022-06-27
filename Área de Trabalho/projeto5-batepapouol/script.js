@@ -1,14 +1,21 @@
 // ENTRAR NA SALA
-/*function participantes(){
-   const participante = {
+function participantes(participante){
+    participante = {
       name: prompt ("Qual seu lindo Nome?")
    }
 
   const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", participante);
    promise.then(alertarSucesso);
    promise.catch(alertarErro);
+}
+
+
 
 participantes();
+
+const element = document.getElementById("demo");
+setInterval(function() {element.innerHTML += "Hello"}, 1000);
+
 // VERIFICA SE HOUVE SUCESSO NO CADASTRO
 function alertarSucesso(resposta){
    console.log(resposta);
@@ -17,9 +24,9 @@ function alertarSucesso(resposta){
 // VERIFICA SE  HOUVE FALHA NO CADASTRO
 function alertarErro(error){
    console.log(error);
-
 }
-}*/
+
+
 
 
 // BUSCAR MENSAGENS DA SALA   
@@ -41,12 +48,12 @@ function buscarDados(){
 
 function popularDados(resposta){
     mensagens = resposta.data;  
-    renderizarReceitas();
+    renderizarMensagens();
 }
 
 
 
- function renderizarReceitas(){
+ function renderizarMensagens(){
       const ulMensagens2 = document.querySelector('.mensagens1');
       ulMensagens2.innerHTML = "";  
       const ulMensagens1 = document.querySelector('.mensagens1');
@@ -77,18 +84,18 @@ function popularDados(resposta){
          `;
          }
       }   
+  window.scrollTo(0, 5000);
+      
+    
+      function autoRefresh() {
+         window.location = window.location.mensagens;
+      }
+      setInterval(autoRefresh(), 5000);
+      
       
    }
 
     
-      var scroll = document.querySelector(".vazia");
-      scroll.scrollTop = rolado.scrollHeight;
-  
-
-   setTimeout(function(){
-      window.scrollTo(0, scroll)
-  }, 1);
-   
 
   
 
